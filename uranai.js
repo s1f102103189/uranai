@@ -1,26 +1,16 @@
-function exe(){
-    let name;
-    let keca;
-    name=prompt("名前をいえ。");
-    if (name==""){
-      name="none";
+function initializeFortuneTelling() {
+    let userName = prompt("名前を入力してください。");
+  
+    if (!userName) {
+      userName = "none";
     }
-    document.getElementById("name").innerHTML=name;
-    let co =Math.floor (Math.random()*5);
-    if (co==0){
-      keca="大吉"
-    }else if (co==1){
-      keca="中吉"
-    }else if (co==2){
-      keca="小吉"
-    }else if (co==3){
-      keca="吉"
-    }else if (co==4){
-      keca="凶"
-    }else if (co==5){
-      keca="大凶"
-    }else if (co==6){
-        keca="死"
-    }
-    document.getElementById("keca").innerHTML=keca;
-    }
+  
+    document.getElementById("userName").textContent = userName;
+  
+    const fortunes = ["大吉", "中吉", "小吉", "吉", "凶", "大凶", "死"];
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+    const userFortune = fortunes[randomIndex];
+  
+    document.getElementById("fortuneResult").textContent = userFortune;
+  }
+  

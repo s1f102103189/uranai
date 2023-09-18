@@ -4,17 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="uranai.css" />
-  <script type="text/javascript" src="uranai.js"></script>
+  <script type="text/javascript" src="uranai.js" defer></script>
   <title>唐突に占ってもいいですか？</title>
 </head>
 
 <body>
-  <p>ようこそ<span id="name"></span>さん!</p>
-  <p>あなたの運勢は<span id="keca"></span>です!</p>
-  <img src="uranai.png">
-  <script>
-    exe();
-  </script>
+  <div class="container">
+    <h1>唐突に占ってもいいですか？</h1>
+    <button onclick="initializeFortuneTelling()">占う</button>
+    <p>ようこそ<span id="userName"></span>さん!</p>
+    <p>あなたの運勢は<span id="fortuneResult"></span>です!</p>
+    <img src="uranai.png" alt="Fortune Telling Image">
+  </div>
 </body>
 
 </html>
